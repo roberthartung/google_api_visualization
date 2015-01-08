@@ -1,0 +1,6 @@
+name: google_api_visualization
+version: 0.0.1
+author: Robert Hartung
+description: A library for google's visualization api.
+homepage: https://www.github.com/roberthartung/google_api_visualization
+documentation: https://www.github.com/roberthartung/google_api_visualization
