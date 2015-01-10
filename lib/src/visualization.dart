@@ -43,7 +43,7 @@ abstract class Visualization {
   }
   
   void draw(dynamic data_table_or_view, [Map options]) {
-    _object.callMethod('draw', [data_table_or_view._object, options]);
+    _object.callMethod('draw', [data_table_or_view._object, new JsObject.jsify(options)]);
   }
   
   List<SelectionItem> getSelection() {
@@ -54,5 +54,9 @@ abstract class Visualization {
     });
     // selection.addAll(selection_array);
     return selection;
+  }
+  
+  static DataTable arrayToDataTable(List<List> twoDArray, [bool firstRowIsData = false]) {
+    return new DataTable._fromJsObject((context['google']['visualization'] as JsObject).callMethod('arrayToDataTable', [new JsObject.jsify(twoDArray), firstRowIsData]));
   }
 }

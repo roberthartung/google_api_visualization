@@ -6,4 +6,7 @@ import 'dart:async';
 
 part 'src/datatable.dart';
 part 'src/visualization.dart';
+
 part 'src/piechart.dart';
+part 'src/areachart.dart';
+part 'src/gauge.dart';
